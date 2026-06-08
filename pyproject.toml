@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "hex-graph-constraint"
+version = "0.1.0"
+description = "Hexagonal graph constraint theory — Laman rigidity, ZHC algorithm, benchmarking on hexagonal lattices"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.7", "numpy>=1.24"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+hex-graph-benchmark = "benchmark:benchmark"
+hex-graph-verify = "verify:main"
